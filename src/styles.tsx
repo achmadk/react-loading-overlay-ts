@@ -1,7 +1,7 @@
-import { CSSInterpolation, keyframes } from '@emotion/css'
-import { TransitionStatus } from 'react-transition-group/Transition'
+import { CSSInterpolation, keyframes } from '@emotion/css';
+import { TransitionStatus } from 'react-transition-group/Transition';
 
-import { LoadingOverLayProps, OverflowCSS } from './LoadingOverlayTypes'
+import { LoadingOverLayProps, OverflowCSS } from './LoadingOverlayTypes';
 
 const rotate360 = keyframes`
   from {
@@ -10,7 +10,7 @@ const rotate360 = keyframes`
   to {
     transform: rotate(360deg);
   }
-`
+`;
 
 const spinnerDash = keyframes`
   0% {
@@ -25,18 +25,21 @@ const spinnerDash = keyframes`
     stroke-dasharray: 89,200;
     stroke-dashoffset: -124px;
   }
-`
+`;
 
-export type StyleKeys = 'wrapper' | 'overlay' | 'content' | 'spinner'
+export type StyleKeys = 'wrapper' | 'overlay' | 'content' | 'spinner';
 
 export type Styles<StateType = any> = {
-  [key in StyleKeys]: (state: StateType, props?: LoadingOverLayProps) => CSSInterpolation | TemplateStringsArray
-}
+  [key in StyleKeys]: (
+    state: StateType,
+    props?: LoadingOverLayProps
+  ) => CSSInterpolation | TemplateStringsArray;
+};
 
 const styles: Styles = {
   wrapper: (state: OverflowCSS) => ({
     position: 'relative',
-    ...state
+    ...state,
   }),
   overlay(state: TransitionStatus, props?: LoadingOverLayProps) {
     return {
@@ -52,11 +55,11 @@ const styles: Styles = {
       backgroundColor: 'rgba(0, 0, 0, 0.7)',
       zIndex: 800,
       transition: `opacity ${props?.fadeSpeed ?? 500}ms ease-in`,
-      opacity: (state === 'entering' || state === 'entered') ? 1 : 0
-    }
+      opacity: state === 'entering' || state === 'entered' ? 1 : 0,
+    };
   },
   content: () => ({
-    margin: 'auto'
+    margin: 'auto',
   }),
   spinner: () => ({
     position: 'relative',
@@ -66,7 +69,7 @@ const styles: Styles = {
     '&:before': {
       content: '""',
       display: 'block',
-      paddingTop: '100%'
+      paddingTop: '100%',
     },
     '& svg': {
       animation: `${rotate360} 2s linear infinite`,
@@ -84,10 +87,10 @@ const styles: Styles = {
         strokeDasharray: '1,200',
         strokeDashoffset: 0,
         strokeLinecap: 'round',
-        stroke: '#FFF'
-      }
-    }
-  })
-}
+        stroke: '#FFF',
+      },
+    },
+  }),
+};
 
-export default styles
+export default styles;
