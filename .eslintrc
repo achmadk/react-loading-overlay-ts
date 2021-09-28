@@ -1,6 +1,6 @@
 {
   "extends": [
-    "plugin:testing-library/recommended",
+    "plugin:testing-library/dom",
     "plugin:jest-dom/recommended"
   ]
 }
