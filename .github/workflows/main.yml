@@ -21,15 +21,15 @@ jobs:
 
       - name: Install deps and build (with cache)
         uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+          useRollingCache: true
 
       - name: Lint
         run: yarn lint
 
       - name: Test
         run: yarn test --ci --coverage --maxWorkers=2
-        with:
-          useLockFile: false
-          useRollingCache: true
 
       - name: Build
         run: yarn build
