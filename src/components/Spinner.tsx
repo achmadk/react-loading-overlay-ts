@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { css } from '@emotion/css';
 
 export type SpinnerProps = {
@@ -6,7 +6,7 @@ export type SpinnerProps = {
   cx: (name: string, arg2: any) => string;
 };
 
-const Spinner: React.FC<SpinnerProps> = props => (
+const Spinner: FC<SpinnerProps> = (props) => (
   <div className={props.cx('spinner', css(props.getStyles('spinner')))}>
     <svg viewBox="25 25 50 50">
       <circle

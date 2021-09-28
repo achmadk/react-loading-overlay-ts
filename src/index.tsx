@@ -30,9 +30,9 @@ class LoadingOverlayWrapperBase extends PureComponent<
     this.wrapperEl = this.overlayRef.current?.parentElement;
     if (this.wrapperEl !== null && this.wrapperEl !== undefined) {
       const wrapperStyle = window.getComputedStyle(this.wrapperEl);
-      const overflowCSS = (['overflow', 'overflowX', 'overflowY'] as Array<
-        keyof OverflowCSS
-      >).reduce<OverflowCSS>((m, i) => {
+      const overflowCSS = (
+        ['overflow', 'overflowX', 'overflowY'] as Array<keyof OverflowCSS>
+      ).reduce<OverflowCSS>((m, i) => {
         if (wrapperStyle[i] !== 'visible') m[i] = 'hidden';
         return m;
       }, {} as OverflowCSS);
@@ -60,9 +60,9 @@ class LoadingOverlayWrapperBase extends PureComponent<
     const base = STYLES[key](providedState, this.props);
     const custom: Styles[keyof Styles] = (styles as Styles)[key] ?? false;
     if (!custom) return base;
-    return (typeof custom === 'function'
-      ? custom(base, this.props)
-      : custom) as CSSInterpolation | TemplateStringsArray;
+    return (
+      typeof custom === 'function' ? custom(base, this.props) : custom
+    ) as CSSInterpolation | TemplateStringsArray;
   };
 
   /**
@@ -73,7 +73,7 @@ class LoadingOverlayWrapperBase extends PureComponent<
     const { classNamePrefix = '_loading_overlay_' } = this.props;
     const arr = Array.isArray(names) ? names : [names];
     return cx(
-      ...arr.map(name => (name ? `${classNamePrefix}${name}` : '')),
+      ...arr.map((name) => (name ? `${classNamePrefix}${name}` : '')),
       ...args
     );
   };
@@ -112,7 +112,7 @@ class LoadingOverlayWrapperBase extends PureComponent<
           timeout={fadeSpeed!}
           unmountOnExit
         >
-          {state => (
+          {(state) => (
             <div
               ref={this.overlayRef}
               data-testid="overlay"
