@@ -24,7 +24,7 @@ jobs:
         with:
           useLockFile: false
           useRollingCache: true
-          install-command: yarn --frozen-lockfile --silent
+          install-command: yarn --silent
 
       - name: Lint
         run: yarn lint
