@@ -23,7 +23,7 @@ jobs:
         uses: bahmutov/npm-install@v1
         with:
           useLockFile: false
-          useRollingCache: true
+          # useRollingCache: true
           install-command: yarn --silent
 
       - name: Lint
