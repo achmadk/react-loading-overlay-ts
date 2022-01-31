@@ -4,6 +4,8 @@
 ![minified + gzipped](https://badgen.net/bundlephobia/minzip/react-loading-overlay-ts)
 [![downloads](https://badgen.net/npm/dw/react-loading-overlay-ts)](https://www.npmjs.com/package/react-loading-overlay-ts)
 
+<a href="https://www.buymeacoffee.com/achmadkurnianto"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee &emoji=😁&slug=achmadkurnianto&button_colour=5F7FFF&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"></a>
+
 A customizable, simple loading overlay with spinner, transitions. 
 
 Comparing to `react-loading-overlay`, this library support ES Module and Typescript friendly, and also have another features like ref forwarding and using latest version of `@emotion/css` instead `emotion`.
