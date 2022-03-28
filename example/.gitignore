@@ -1,10 +1,3 @@
-*.log
-.DS_Store
-node_modules
-coverage
-.cache
-dist
-
 .yarn/*
 !.yarn/patches
 !.yarn/releases
@@ -13,4 +6,5 @@ dist
 !.yarn/versions
 .pnp.*
 
-storybook-static
+.yarn
+.parcel-cache
