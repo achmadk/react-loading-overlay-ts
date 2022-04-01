@@ -1,4 +1,4 @@
-import React, { createRef, forwardRef, PureComponent } from 'react';
+import { createRef, forwardRef, PureComponent } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { css, CSSInterpolation, cx } from '@emotion/css';
 import { TransitionStatus } from 'react-transition-group/Transition';
@@ -57,8 +57,9 @@ class LoadingOverlayWrapperBase extends PureComponent<
     providedState?: OverflowCSS | TransitionStatus
   ) => {
     const { styles = {} } = this.props;
-    const base = STYLES[key](providedState, this.props);
-    const custom: Styles[keyof Styles] = (styles as Styles)[key] ?? false;
+    const base = STYLES?.[key]?.(providedState, this.props);
+    const custom: Styles[keyof Styles] | boolean =
+      (styles as Styles)?.[key] ?? false;
     if (!custom) return base;
     return (
       typeof custom === 'function' ? custom(base, this.props) : custom

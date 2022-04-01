@@ -33,10 +33,17 @@ npm i react-loading-overlay-ts
 yarn add react-loading-overlay-ts
 ```
 
+**If you are still using react 17.x, please install v1.0.5 instead**
+```sh
+npm i react-loading-overlay-ts@1.0.5
+# or
+yarn add react-loading-overlay-ts@1.0.5
+```
+
 Wrap your components in it and toggle the `active` prop as necessary.
 
 ```javascript
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import LoadingOverlay from 'react-loading-overlay-ts';
 
 const Sample = () => {
