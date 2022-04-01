@@ -30,7 +30,7 @@ const spinnerDash = keyframes`
 export type StyleKeys = 'wrapper' | 'overlay' | 'content' | 'spinner';
 
 export type Styles<StateType = any> = {
-  [key in StyleKeys]: (
+  [key in StyleKeys]?: (
     state: StateType,
     props?: LoadingOverLayProps
   ) => CSSInterpolation | TemplateStringsArray;

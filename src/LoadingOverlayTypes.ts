@@ -65,12 +65,16 @@ export type LoadingOverLayProps = {
    * see [Styling](#styles-with-emotion) for more info.
    * @default undefined
    *
-   * @type {Styles}
+   * @type {({
+   *     [key in StyleKeys]?: Styles[StyleKeys] | CSSInterpolation | TemplateStringsArray
+   *   })}
    */
-  styles?: Record<
-    StyleKeys,
-    Styles[StyleKeys] | CSSInterpolation | TemplateStringsArray
-  >;
+  styles?: {
+    [key in StyleKeys]?:
+      | Styles[StyleKeys]
+      | CSSInterpolation
+      | TemplateStringsArray;
+  };
 
   /**
    *
