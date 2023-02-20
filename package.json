@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -13,7 +13,7 @@
     "dist"
   ],
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "scripts": {
     "start": "dts watch",
@@ -42,60 +42,66 @@
   "size-limit": [
     {
       "path": "dist/react-loading-overlay-ts.cjs.production.min.js",
-      "limit": "57 KB"
+      "limit": "59 KB"
     },
     {
       "path": "dist/react-loading-overlay-ts.esm.js",
-      "limit": "53 KB"
+      "limit": "56 KB"
     }
   ],
   "devDependencies": {
-    "@babel/core": "^7.17.8",
-    "@emotion/babel-plugin": "11.7.2",
-    "@size-limit/preset-small-lib": "^7.0.8",
+    "@babel/core": "^7.20.12",
+    "@emotion/babel-plugin": "11.10.6",
+    "@size-limit/esbuild": "8.2.4",
+    "@size-limit/esbuild-why": "8.2.4",
+    "@size-limit/preset-small-lib": "^8.2.4",
     "@skypack/package-check": "0.2.2",
-    "@storybook/addon-actions": "6.4.20",
-    "@storybook/addon-essentials": "^6.4.20",
+    "@storybook/addon-actions": "6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-info": "^5.3.21",
-    "@storybook/addon-links": "^6.4.20",
-    "@storybook/addons": "^6.4.20",
-    "@storybook/react": "^6.4.20",
-    "@testing-library/jest-dom": "5.16.3",
-    "@testing-library/react": "13.0.0",
-    "@testing-library/user-event": "14.0.3",
-    "@types/react": "^17.0.43",
-    "@types/react-dom": "^17.0.14",
-    "@types/react-transition-group": "4.4.4",
-    "@typescript-eslint/eslint-plugin": "5.17.0",
-    "@typescript-eslint/parser": "5.17.0",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/addon-postcss": "2.0.0",
+    "@storybook/addons": "^6.5.16",
+    "@storybook/builder-webpack5": "6.5.16",
+    "@storybook/manager-webpack5": "6.5.16",
+    "@storybook/react": "^6.5.16",
+    "@testing-library/jest-dom": "5.16.5",
+    "@testing-library/react": "14.0.0",
+    "@testing-library/user-event": "14.4.3",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@types/react-transition-group": "4.4.5",
+    "@typescript-eslint/eslint-plugin": "5.52.0",
+    "@typescript-eslint/parser": "5.52.0",
     "babel-eslint": "10.1.0",
-    "babel-loader": "^8.2.4",
-    "dts-cli": "1.4.0",
-    "eslint": "8.12.0",
-    "eslint-config-prettier": "8.5.0",
-    "eslint-config-react-app": "7.0.0",
+    "babel-loader": "^9.1.2",
+    "dts-cli": "1.6.3",
+    "eslint": "8.34.0",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-config-react-app": "7.0.1",
     "eslint-plugin-flowtype": "8.0.3",
-    "eslint-plugin-import": "2.25.4",
-    "eslint-plugin-jest-dom": "4.0.1",
-    "eslint-plugin-jsx-a11y": "6.5.1",
-    "eslint-plugin-prettier": "4.0.0",
-    "eslint-plugin-react": "7.29.4",
-    "eslint-plugin-react-hooks": "4.4.0",
-    "eslint-plugin-testing-library": "5.2.0",
-    "husky": "7.0.4",
-    "parcel": "2.4.1",
-    "prettier": "2.6.1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-is": "^18.0.0",
-    "size-limit": "^7.0.8",
-    "tslib": "^2.3.1",
-    "typescript": "^4.6.3"
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jest-dom": "4.0.3",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-testing-library": "5.10.2",
+    "husky": "8.0.3",
+    "parcel": "2.8.3",
+    "prettier": "2.8.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
+    "size-limit": "^8.2.4",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5",
+    "webpack": "5.75.0"
   },
   "dependencies": {
-    "@emotion/css": "11.7.1",
+    "@emotion/css": "11.10.6",
     "@scarf/scarf": "1.1.1",
-    "react-transition-group": "4.4.2"
+    "react-transition-group": "4.4.5"
   },
   "keywords": [
     "react",
@@ -110,5 +116,5 @@
     "type": "git",
     "url": "https://github.com/achmadk/react-loading-overlay-ts"
   },
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.4.1"
 }

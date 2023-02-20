@@ -20,15 +20,15 @@ class LoadingOverlayWrapperBase extends PureComponent<
 > {
   static displayName = 'LoadingOverlay';
 
-  wrapperEl: HTMLElement | null | undefined = null;
+  wrapperEl: HTMLElement | null = null;
 
   overlayRef = createRef<HTMLDivElement>();
 
   state = { overflowCSS: undefined };
 
   componentDidMount() {
-    this.wrapperEl = this.overlayRef.current?.parentElement;
-    if (this.wrapperEl !== null && this.wrapperEl !== undefined) {
+    this.wrapperEl = this.overlayRef.current?.parentElement ?? null;
+    if (this.wrapperEl !== null) {
       const wrapperStyle = window.getComputedStyle(this.wrapperEl);
       const overflowCSS = (
         ['overflow', 'overflowX', 'overflowY'] as Array<keyof OverflowCSS>
@@ -112,6 +112,7 @@ class LoadingOverlayWrapperBase extends PureComponent<
           classNames="_loading-overlay-transition"
           timeout={fadeSpeed!}
           unmountOnExit
+          nodeRef={this.overlayRef}
         >
           {(state) => (
             <div
