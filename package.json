@@ -1,10 +1,11 @@
 {
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
       "import": "./dist/react-loading-overlay-ts.esm.js"
     }
@@ -116,5 +117,5 @@
     "type": "git",
     "url": "https://github.com/achmadk/react-loading-overlay-ts"
   },
-  "packageManager": "yarn@3.4.1"
+  "packageManager": "yarn@3.5.1"
 }
